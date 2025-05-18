@@ -60,7 +60,7 @@
 ### Bash
 
 ```bash
-Git glone https://github.com/codigoperfeito/task-restfull/
+Git glone https://github.com/codigoperfeito/task-restful/
 Cd task-restful
 ```
 

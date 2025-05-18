@@ -15,6 +15,7 @@
 ### Observações
 
 - Backend desenvolvido em **NestJS**.
+- Documentaçao da API feita através do **Swagger**
 - Manipula dados via serviço interno `TasksService`.
 - CORS deve estar habilitado para aceitar requisições do frontend (`localhost:4000`).
 

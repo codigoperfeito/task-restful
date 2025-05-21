@@ -1,7 +1,7 @@
 type Task = {
-    id: number,
-    title: String,
-    description: String,
-    complete: String,
+    id: string,
+    title: string,
+    description: string,
+    complete: boolean,
 }
 export default Task;

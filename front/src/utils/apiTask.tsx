@@ -34,17 +34,20 @@ export async function createTask(title:string,description:string): Promise<Task[
         
     }
 }
-export async function updateTask(task: Task): Promise<Task> {
+export async function updateTask(id:string,title:string,description:string,complete:boolean): Promise<Task[]> {
     try {
-        const response = await axios.put<Task>(`${baseUrl}${task.id}`, task)
-        return response.data;
+        const response = await axios.put<Task>(`${baseUrl}/${id}`, {title,description,complete})
+        const respota = await getTasks()
+        return respota;
     } catch (error) {
         throw new Error(`erro na atualizacao: ${error}`);
     }
 }
-export async function deleteTask(id: string): Promise<void> {
+export async function deleteTask(id: string): Promise<Task[]> {
     try {
-        await axios.delete(`${baseUrl}${id}`)
+        await axios.delete(`${baseUrl}/${id}`)
+        const respota = await getTasks()
+        return respota;
     } catch (error) {
         throw new Error(`erro na exclusao: ${error}`);
     }

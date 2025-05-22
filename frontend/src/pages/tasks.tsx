@@ -31,7 +31,7 @@ export default function TasksManager() {
           setUserName(usuario);
         }
       } catch (error) {
-        console.error("Error fetching tasks:", error);
+        console.error("erro UseEffect task.tsx:", error);
       } finally {
         setLoading(false);
       }
@@ -45,7 +45,7 @@ export default function TasksManager() {
       setTaskView(updatedTasks);
       setTasks(updatedTasks);
     } catch (error) {
-      console.error("Error updating task status:", error);
+      console.error("Erro setComplete task.tsx:", error);
     }
   };
 
@@ -150,8 +150,8 @@ export default function TasksManager() {
             </p>
           </div>
         </div>
-        <div className="headler w-4xl border-1 text-gray-800 dark:bg-gray-800 px-10 mt-10 shadow-lg flex flex-col rounded-md">
-          <div className="inputs m-10 dark:text-white ">
+        <div className="headler w-4xl dark:text-white border-1 text-gray-800 dark:bg-gray-800 px-10 mt-10 shadow-lg flex flex-col rounded-md">
+          <div className="inputs m-10  ">
             <h1 className="font-bold text-2xl">Nova Tarefa</h1>
           </div>
           <div className="filters">

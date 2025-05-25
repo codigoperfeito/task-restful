@@ -14,10 +14,28 @@
 
 ### Observações
 
-- Backend desenvolvido em **NestJS**.
-- Documentaçao da API feita através do **Swagger**
-- Manipula dados via serviço interno `TasksService`.
-- CORS deve estar habilitado para aceitar requisições do frontend (`localhost:4000`).
+## Backend
+
+### Visão Geral
+
+- O backend foi desenvolvido utilizando o framework **NestJS**.
+- A documentação da API foi criada com **Swagger** para facilitar a integração e o uso.
+
+### Estrutura de Pastas
+
+O backend possui dois modos de operação, organizados em subpastas:
+
+1. **`/backend-off-sqlite`**:
+   - Manipula dados usando o serviço interno `TasksService` sem conexão com o banco de dados.
+
+
+2. **`/backend-on-sqlite`**:
+   - Manipula dados utilizando o banco de dados **SQLite** através do **Prisma**.
+
+### Observações Importantes
+
+- O **CORS** deve estar habilitado para permitir requisições do frontend na origem `http://localhost:4000`.
+
 
 ---
 
@@ -66,6 +84,8 @@ Cd task-restful
 ```
 
 ### Backend
+
+***obs:existem duas partes o com SQLite e sem SQLite escolha qualquer um dos dois***
 
 ```bash
 npm -i

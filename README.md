@@ -87,8 +87,18 @@ Cd task-restful
 
 ***obs:existem duas partes o com SQLite e sem SQLite escolha qualquer um dos dois***
 
+##### ***sem SQLite***(backend-off-sqlite)
+
 ```bash
 npm -i
+npm run start:dev
+```
+
+##### ***com SQLite(backend-on-sqlite)***
+
+```bash
+npm -i
+npx prisma generate
 npm run start:dev
 ```
 

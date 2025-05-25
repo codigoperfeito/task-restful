@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { Task } from './tasks.entity';
+import { ApiBody } from '@nestjs/swagger';
 
 /**
  * @Controller tasks
@@ -18,7 +19,6 @@ import { Task } from './tasks.entity';
 @Controller('tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
-
   /**
    * @Get /
    * @description Retorna todas as tarefas cadastradas.
@@ -42,6 +42,7 @@ export class TasksController {
    * @Post /
    * @description Cria uma nova tarefa.
    */
+  @ApiBody({type:Task})
   @Post()
   createTask(
     @Body('title') title: string,

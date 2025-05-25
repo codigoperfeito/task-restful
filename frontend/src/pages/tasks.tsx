@@ -26,6 +26,7 @@ export default function TasksManager() {
         } else {
           setLoading(true);
           const tasksData = await getTasks();
+          console.log(tasksData);
           setTaskView(tasksData);
           setTasks(tasksData);
           setUserName(usuario);
@@ -44,6 +45,7 @@ export default function TasksManager() {
       const updatedTasks = await updateTask(id, title, description, complete);
       setTaskView(updatedTasks);
       setTasks(updatedTasks);
+      
     } catch (error) {
       console.error("Erro setComplete task.tsx:", error);
     }

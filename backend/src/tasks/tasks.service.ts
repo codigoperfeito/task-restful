@@ -12,11 +12,11 @@ export class TasksService {
   getTaskById(id: string): Task {
     const task = this.tasks.find((t) => t.id === id);
     if (!task) {
-      throw new NotFoundException(`Task with ID "${id}" not found`);
+      throw new NotFoundException(`Task com ID "${id}" nao encontrado`); // aqui um excessao especifica que mostra que nao foi encontrado
     }
     return task;
   }
-
+  
   createTask(title: string, description: string): Task {
     const newTask: Task = {
       id: Date.now().toString(),
@@ -37,10 +37,10 @@ export class TasksService {
   }
 
   deleteTask(id: string): void {
-    const index = this.tasks.findIndex((t) => t.id === id);
-    if (index === -1) {
-      throw new NotFoundException(`Task with ID "${id}" not found`);
+    const valueInitial = this.tasks.length;
+    this.tasks = this.tasks.filter(e=>e.id !== id);
+    if (valueInitial === this.tasks.length) {
+      throw new NotFoundException(`Task com ID "${id}" nao encontrado`);
     }
-    this.tasks.splice(index, 1);
   }
 }

@@ -8,7 +8,7 @@ import {
   Body 
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
-import { Task } from './tasks.entity';
+import { Task, TaskPost } from './tasks.entity';
 import { ApiBody } from '@nestjs/swagger';
 
 /**
@@ -42,7 +42,7 @@ export class TasksController {
    * @Post /
    * @description Cria uma nova tarefa.
    */
-  @ApiBody({type:Task})
+  @ApiBody({type:TaskPost})
   @Post()
   createTask(
     @Body('title') title: string,

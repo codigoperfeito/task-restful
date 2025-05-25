@@ -1,4 +1,4 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty, PickType } from "@nestjs/swagger";
 
 export class Task {
   @ApiProperty({
@@ -22,3 +22,5 @@ export class Task {
   })
   complete: boolean;
 }
+
+export class TaskPost extends PickType (Task,['title','description']){}

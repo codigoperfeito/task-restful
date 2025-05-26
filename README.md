@@ -54,7 +54,7 @@ O backend possui dois modos de operação, organizados em subpastas:
 
 - Componente principal: `TaskManager` (React Functional Component).
 - Usa hooks: `useState`, `useEffect`.
-- Chamada HTTP via `axios` para `http://localhost:3000/tasks`.
+- Chamada HTTP via `axios` para `http://localhost:4000/tasks`.
 - Estilização rápida e responsiva com **TailwindCSS**.
 
 ### Fluxo do aplicativo
@@ -85,7 +85,7 @@ Cd task-restful
 
 ### Backend
 
-***obs:existem duas partes o com SQLite e sem SQLite escolha qualquer um dos dois***
+***obs:existem duas pastas uma com SQLite e outra sem SQLite escolha qualquer uma das duas***
 
 ##### ***sem SQLite***(backend-off-sqlite)
 
